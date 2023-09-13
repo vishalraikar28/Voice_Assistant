@@ -6,17 +6,16 @@ import calendar
 import pywhatkit
 import ecapture as ec
 import tkinter as tk
-#method is used to speak
 
- 
+
+#method is used to speak
 def speak(text):
      engine=pyttsx3.init('sapi5')
      voice=engine.getProperty("voices")
      engine.setProperty("voice",voice[1].id)
      engine.say(text)
      engine.runAndWait()
-#method is used to take input
-#listener=sr.Recognizer()
+
 def Take_Input():
  try:
   listener=sr.Recognizer() #instance of recognizer class
@@ -28,7 +27,7 @@ def Take_Input():
        #print("Recognizing...")    
        text=listener.recognize_google(voice,language='en-in')    #this method converts voice to text
        print(text)  #print voice
-       #speak(text) #callig speak method from projecta file
+       
  except:
     print("try again")
     return "NONE"
@@ -74,12 +73,4 @@ if __name__=="__main__" :
      openappweb(text)
   elif 'close' in text:
      from sub_project import *
-     closeappweb(text)
-#window = tk.Tk()
-#window.title("desktop Assistant")
-#label = tk.Label(window,text="welcome to desktop assistant")
-#label.pack()
-#speak_button=tk.Button(window,text="speak",command=)
-
-  
-   
+     closeappweb(text)   
