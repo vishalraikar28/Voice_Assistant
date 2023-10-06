@@ -5,7 +5,7 @@ import os
 import calendar
 import pywhatkit
 import ecapture as ec
-import tkinter as tk
+
 
 
 #method is used to speak
